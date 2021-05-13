@@ -1,7 +1,7 @@
 Type: Application
-Name: devsapp/start-sae
+Name: start-sae
 Provider:
-  - 云厂商名称 # 阿里云, 百度智能云, 华为云, 腾讯云, AWS, Azure, Google Cloud, 其它
+  - 阿里云
 Version: 0.0.1
 Description: SAE应用
 HomePage: https://sae.console.aliyun.com
