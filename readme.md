@@ -26,5 +26,5 @@ services:
 | --- |  ---  |  ---  |  ---  |
 | region | True | Enum | 地域 |
 | name | True | String | 应用 名字 |
-| imageUrl | True | Struct | 镜像地址 |
+| imageUrl | True | String | 镜像地址 |
 
