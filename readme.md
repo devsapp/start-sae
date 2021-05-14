@@ -16,7 +16,7 @@ services:
     component:  devsapp/sae
     props:
       region: cn-shenzhen
-      name: dankun-sae
+      appName: dankun-sae
       imageUrl: registry-vpc.cn-shenzhen.aliyuncs.com/sae-demo-image/consumer:1.0
 ```
 
