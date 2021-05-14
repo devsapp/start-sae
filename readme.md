@@ -12,7 +12,7 @@ name: sae-app            #  项目名称
 access: aliyun-release  #  秘钥别名
 
 services:
-  ros-test: #  服务名称
+  sae-test: #  服务名称
     component:  devsapp/sae
     props:
       region: cn-shenzhen
