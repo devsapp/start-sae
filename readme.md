@@ -24,7 +24,7 @@ services:
 
 | 参数名 |  必填  |  类型  |  参数描述  |
 | --- |  ---  |  ---  |  ---  |
-| region | True | Enum | 地域 |
+| region | True | String | 地域 |
 | name | True | String | 应用 名字 |
 | imageUrl | True | String | 镜像地址 |
 
