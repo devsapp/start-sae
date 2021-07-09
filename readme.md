@@ -17,8 +17,8 @@ services:
     props:
       region: cn-shenzhen
       appName: dankun-sae
-      packageType: Image
-      imageUrl: registry-vpc.cn-shenzhen.aliyuncs.com/sae-demo-image/consumer:1.0
+      packageType: FatJar
+      imageUrl: https://edas-sh.oss-cn-shanghai.aliyuncs.com/apps/K8S_APP_ID/57ba4361-82aa-4b08-9295-b36b00f0a38e/hello-sae.jar
       replicas: 1
       cpu: 500
       memory: 1024
