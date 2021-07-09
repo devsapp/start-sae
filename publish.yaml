@@ -2,7 +2,7 @@ Type: Application
 Name: start-sae
 Provider:
   - 阿里云
-Version: 0.0.8
+Version: 0.0.9
 Description: SAE应用
 HomePage: https://sae.console.aliyun.com
 Tags: #标签详情
