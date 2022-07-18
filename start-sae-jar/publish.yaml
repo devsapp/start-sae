@@ -8,7 +8,7 @@ HomePage: https://github.com/devsapp/start-sae/start-sae-jar
 Tags:
   - Web应用
   - SAE
-Category: Web应用
+Category: Web框架
 Service: # 使用的服务
   Serverless 应用引擎:
     Authorities: #权限描述
