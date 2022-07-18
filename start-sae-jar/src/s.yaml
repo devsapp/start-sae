@@ -1,0 +1,23 @@
+edition: 1.0.0          #  命令行YAML规范版本，遵循语义化版本（Semantic Versioning）规范
+name: functionApp       #  项目名称
+access: aliyun-release  #  秘钥别名
+
+vars: # 全局变量
+  region: "{{ region }}"
+  appName: "{{ appName }}"
+
+services:
+  function-test: #  服务名称
+    component: fc  # 组件名称
+    props: #  组件的属性值
+      region: ${vars.region}
+      application:
+        name: test
+        description: This is a test description.
+        code:
+          package: demo.jar
+        cpu: 500
+        memory: 1024
+        replicas: 1
+      slb:
+        Internet: [{"port":80,"targetPort":8088,"protocol":"TCP"}]
