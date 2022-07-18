@@ -2,7 +2,7 @@ Type: Application
 Name: start-sae-jar
 Provider:
   - 阿里云
-Version: 0.0.1
+Version: 0.0.2
 Description: Serverless应用引擎SAE
 HomePage: https://github.com/devsapp/start-sae/start-sae-jar
 Tags:
