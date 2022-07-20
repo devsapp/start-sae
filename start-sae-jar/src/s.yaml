@@ -16,8 +16,4 @@ services:
         description: This is a test description.
         code:
           package: demo.jar
-        cpu: 500
-        memory: 1024
-        replicas: 1
-      slb:
-        Internet: [{"port":80,"targetPort":8088,"protocol":"TCP"}]
+        port: 8088
