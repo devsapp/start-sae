@@ -5,10 +5,12 @@ access: alibaba-access  #  秘钥别名
 services:
   function-test: #  服务名称
     component: sae@dev  # 组件名称
+    # component:  /home/pcy/project/sae
     props: #  组件的属性值
       region: cn-hangzhou
       application:
         name: sae-java-image
         code:
+          type: php
           image: registry.cn-hangzhou.aliyuncs.com/namespace4sae/repo4sae:v1
-        port: 8088
+        port: 80

@@ -1,5 +1,5 @@
 edition: 1.0.0          #  命令行YAML规范版本，遵循语义化版本（Semantic Versioning）规范
-name: sae-java-image       #  项目名称
+name: sae-php-zip       #  项目名称
 access: alibaba-access  #  秘钥别名
 
 services:
@@ -8,7 +8,9 @@ services:
     props: #  组件的属性值
       region: cn-hangzhou
       application:
-        name: sae-java-image
+        name: sae-php-zip
         code:
-          image: registry.cn-hangzhou.aliyuncs.com/namespace4sae/repo4sae:v1
-        port: 8088
+          type: php
+          package: ./src/hello-sae-php.zip
+          # package: https://sae-packages-cn-hangzhou-1976152945975242.oss-cn-hangzhou.aliyuncs.com/Ogjfx1yYEijpiAil.zip
+        port: 80
