@@ -1,15 +1,15 @@
 edition: 1.0.0          #  命令行YAML规范版本，遵循语义化版本（Semantic Versioning）规范
-name: sae-php-image       #  项目名称
+name: sae-other-image       #  项目名称
 access: alibaba-access  #  秘钥别名
 
 services:
   function-test: #  服务名称
-    component: sae@dev  # 组件名称
+    # component: sae@dev  # 组件名称
+    component: /home/pcy/project/sae  # 组件名称
     props: #  组件的属性值
       region: cn-hangzhou
       application:
-        name: sae-php-image
+        name: sae-other-image
         code:
-          type: php
-          image: registry-vpc.cn-hangzhou.aliyuncs.com/namespace4sae/php-server:v1
-        port: 80
+          image: registry.cn-hangzhou.aliyuncs.com/namespace4sae/go-demo:v1
+        port: 8080
