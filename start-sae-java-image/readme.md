@@ -2,11 +2,11 @@
 
 ## 本地快速体验
 
-通过该应用，您可以简单快速的使用SEA组件部署jar包。
+通过该应用，您可以简单快速的使用SEA组件部署image-jar。
 
 - 下载命令行工具：`npm install -g @serverless-devs/s`
-- 初始化一个模版项目：`s init devsapp/start-sae/start-sae-jar`
-- 进入start-sae-jar项目后部署项目：`s deploy`
+- 初始化一个模版项目：`s init devsapp/start-sae/start-sae-java-image`
+- 进入start-sae-java-image项目后部署项目：`s deploy`
 
 
 -----
