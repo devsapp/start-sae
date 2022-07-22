@@ -6,11 +6,11 @@ services:
   function-test: #  服务名称
     component: sae@dev  # 组件名称
     props: #  组件的属性值
-      region: cn-hangzhou
+      region: "{{region}}"
       application:
-        name: sae-php-zip
+        name: "{{appName}}"
         code:
           type: php
-          package: ./src/hello-sae-php.zip
+          package: hello-sae-php.zip
           # package: https://sae-packages-cn-hangzhou-1976152945975242.oss-cn-hangzhou.aliyuncs.com/Ogjfx1yYEijpiAil.zip
         port: 80

@@ -6,7 +6,8 @@
 
 - 下载命令行工具：`npm install -g @serverless-devs/s`
 - 初始化一个模版项目：`s init devsapp/start-sae/start-sae-java-war`
-- 进入start-sae-java-war项目后部署项目：`s deploy`
+- 进入start-sae-java-war项目后，在src/code目录下会看到项目代码，通过maven install命令将项目打包成war包
+- 部署项目：`s deploy`
 
 
 -----
