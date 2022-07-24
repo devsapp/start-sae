@@ -10,4 +10,3 @@ VOLUME $MYPATH
 EXPOSE 8088
 #使用java -jar app.jar去运行
 CMD ["java","-jar","demo.jar"]
-
