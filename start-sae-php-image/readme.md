@@ -3,7 +3,7 @@
 通过该应用，您可以简单快速的使用SEA组件部署php镜像。
 
 - 下载命令行工具：`npm install -g @serverless-devs/s`
-- 初始化一个模版项目：`s init devsapp/start-sae/start-sae-php-image`
+- 初始化一个模版项目：`s init start-sae-php-image`
 - 执行`s deploy`命令，自动将php镜像部署到Serverless应用引擎SAE，并绑定公网SLB，让您的应用可以被公网访问。
 
 ## PHP镜像说明

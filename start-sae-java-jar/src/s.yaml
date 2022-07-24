@@ -8,7 +8,7 @@ services:
     props: #  组件的属性值
       region: "{{region}}"
       application:
-        name: "{[appName]}"
+        name: "{{appName}}"
         code:
           package: demo.jar
           # package: https://sae-packages-cn-hangzhou-1976152945975242.oss-cn-hangzhou.aliyuncs.com/kEAF6sUck0vLhR8x.jar

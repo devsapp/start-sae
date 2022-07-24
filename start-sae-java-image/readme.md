@@ -4,7 +4,7 @@
 通过该应用，您可以简单快速的使用SEA组件部署image-jar。
 
 - 下载命令行工具：`npm install -g @serverless-devs/s`
-- 初始化一个模版项目：`s init devsapp/start-sae/start-sae-java-image`
+- 初始化一个模版项目：`s init start-sae-java-image`
 - 执行`s deploy`命令，自动将镜像部署到Serverless应用引擎SAE，并绑定公网SLB，让您的应用可以被公网访问。
 
 ## java镜像说明
