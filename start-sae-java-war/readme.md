@@ -1,14 +1,10 @@
-# 阿里云SAE
-
-## 本地快速体验
-
+# 将War包部署到SAE
 通过该应用，您可以简单快速的使用SEA组件部署war包。
 
 - 下载命令行工具：`npm install -g @serverless-devs/s`
 - 初始化一个模版项目：`s init devsapp/start-sae/start-sae-java-war`
-- 进入start-sae-java-war项目后，在src/code目录下会看到项目代码，通过maven install命令将项目打包成war包
-- 部署项目：`s deploy`
 
+code文件夹下是java开发的demo应用程序，通过maven install命令打包项目，得到demo.war并放置在s.yaml同一目录下，通过执行`s deploy`命令，自动将demo.war部署到Serverless应用引擎SAE，并绑定公网SLB，让您的应用可以被公网访问。
 
 -----
 
