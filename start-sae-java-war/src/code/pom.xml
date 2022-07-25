@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.nuc</groupId>
-    <artifactId>demo1</artifactId>
+    <artifactId>demo</artifactId>
     <version>1.0</version>
-    <name>demo1</name>
+    <name>demo</name>
     <packaging>war</packaging>
 
     <properties>
