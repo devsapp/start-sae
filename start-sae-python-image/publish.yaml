@@ -1,5 +1,5 @@
 Type: Application
-Name: start-sae-other-image
+Name: start-sae-python-image
 Provider:
   - 阿里云
 Version: dev
