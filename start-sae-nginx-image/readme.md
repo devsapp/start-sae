@@ -17,7 +17,7 @@
 通过该应用，您可以简单快速的使用SEA组件部署go镜像。
 
 - 下载命令行工具：`npm install -g @serverless-devs/s`
-- 初始化一个模版项目：`s init start-sae-other-image`
+- 初始化一个模版项目：`s init start-sae-nginx-image`
 - 执行`s deploy`命令，自动将镜像部署到Serverless应用引擎SAE，并绑定公网SLB，让您的应用可以被公网访问。
 
 ## Go镜像说明
@@ -70,7 +70,7 @@ CMD ["/app/gin-hello-world"]
 ```
 docker build . -t gin-example
 ```
-### 步骤二：制作镜像
+### 步骤二：推送镜像
 1. 在[容器镜像服务控制台](https://cr.console.aliyun.com/?spm=a2c4g.11186623.0.0.728728d704TI4P)创建镜像仓库。
 个人版和企业版实例均适用本文的操作，本文以个人版实例为例。具体操作，请参见以下文档：
 - 个人版实例：[构建仓库与镜像](https://help.aliyun.com/document_detail/60997.htm?spm=a2c4g.11186623.0.0.72871ea7EkVuAt#topic1686)
