@@ -12,64 +12,53 @@
   </a>
 </p>
 
-# 使用SAE组件快速部署Go镜像
+# 使用SAE组件快速部署 python 镜像
 ## 本地快速体验
-通过该应用，您可以简单快速的使用SEA组件部署go镜像。
+通过该应用，您可以简单快速的使用SEA组件部署python镜像。
 
 - 下载命令行工具：`npm install -g @serverless-devs/s`
 - 初始化一个模版项目：`s init start-sae-python-image`
 - 执行`s deploy`命令，自动将镜像部署到Serverless应用引擎SAE，并绑定公网SLB，让您的应用可以被公网访问。
 
-## Go镜像说明
-code文件夹下是制作镜像用到的文件，镜像地址为：registry.cn-hangzhou.aliyuncs.com/namespace4sae/go-demo:v1。您也可以按照[以下步骤](https://help.aliyun.com/document_detail/432780.html)制作自己的镜像。
+## python镜像说明
+code文件夹下是制作镜像用到的文件，镜像地址为：registry.cn-hangzhou.aliyuncs.com/namespace4sae/python-demo:v1。您也可以按照[以下步骤](https://help.aliyun.com/document_detail/432780.html)制作自己的镜像。
 
 ### 步骤一：构建镜像
 1. code文件夹下是本次使用的项目代码，code内的Dockerfile内容如下：
 ```Dockerfile
-# Golang版本；Alpine镜像的体积较小。
-FROM golang:1.16.6-alpine3.14 as builder
+FROM python:2.7
 
-# 替换Alpine镜像，方便安装构建包。
-RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
+# 创建应用程序源代码目录
+RUN mkdir -p /usr/src/app
 
-# 安装构建阶段的依赖。
-RUN apk --update add gcc libc-dev upx ca-certificates && update-ca-certificates
+# 设置容器的主目录
+WORKDIR /usr/src/app
 
-# 将代码复制到构建镜像中。
-# 注意地址不要在GOPATH中。
-ADD . /workspace
+# 安装python依赖项
+COPY requirements.txt /usr/src/app/
+RUN pip install --no-cache-dir -r requirements.txt
 
-WORKDIR /workspace
+# 将src代码复制到容器
+COPY . /usr/src/app
 
-# 挂载构建缓存。
-# GOPROXY防止下载失败。
-RUN --mount=type=cache,target=/go \
-  env GOPROXY=https://goproxy.cn,direct \
-  go build -buildmode=pie -ldflags "-linkmode external -extldflags -static -w" \
-  -o /workspace/gin-hello-world
+# 应用程序环境变量
+#ENV APP_ENV development
+ENV PORT 8080
 
-# 运行时镜像。
-# Alpine兼顾了镜像大小和运维性。
-FROM alpine:3.14
+# 暴露端口
+EXPOSE $PORT
 
-EXPOSE 8080
+# 设置持久数据
+VOLUME ["/app-data"]
 
-# 方便运维人员安装需要的包。
-RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
-
-# 创建日志目录等。
-# RUN mkdir /var/log/onepilot -p && chmod 777 /var/log/onepilot && touch /var/log/onepilot/.keep
-
-# 复制构建产物。
-COPY --from=builder /workspace/gin-hello-world /app/
-
-# 指定默认的启动命令。
-CMD ["/app/gin-hello-world"]
+# 运行Python应用程序
+CMD gunicorn -b :$PORT -c gunicorn.conf.py main:app
 ```
 2. 在code所在目录，执行以下命令，构建镜像。
 ```
-docker build . -t gin-example
+docker build -t python-demo:v1 .
 ```
+
 ### 步骤二：推送镜像
 1. 在[容器镜像服务控制台](https://cr.console.aliyun.com/?spm=a2c4g.11186623.0.0.728728d704TI4P)创建镜像仓库。
 个人版和企业版实例均适用本文的操作，本文以个人版实例为例。具体操作，请参见以下文档：
@@ -82,7 +71,7 @@ docker build . -t gin-example
 
 执行以下命令，构建镜像。
 ```
-docker build --tag go-demo:v1 .
+docker build --tag python-demo:v1 .
 ```
 执行以下命令，登录远端镜像仓库。
 ```
@@ -95,22 +84,22 @@ docker login --username=****@188077086902**** registry.cn-hangzhou.aliyuncs.com
 在返回结果中输入密码，如果显示login succeeded，则表示登录成功。如何设置密码，请参见设置镜像仓库登录密码。
 执行以下命令，给镜像打标签。
 ```
-docker tag <ImageId> registry.<regionId>.aliyuncs.com/****/go-demo:<镜像版本号>
+docker tag <ImageId> registry.<regionId>.aliyuncs.com/****/python-demo:<镜像版本号>
 ```
 - ImageId：镜像ID。
-- registry.<regionId>.aliyuncs.com/****/go-demo：镜像仓库地址。
+- registry.<regionId>.aliyuncs.com/****/python-demo：镜像仓库地址。
 
 示例如下：
 ```
-docker tag go-demo:v1 registry.cn-hangzhou.aliyuncs.com/****/go-demo:v1
+docker tag python-demo:v1 registry.cn-hangzhou.aliyuncs.com/****/python-demo:v1
 ```
 执行以下命令，推送镜像至个人版实例。
 ```
-docker push registry.<regionId>.aliyuncs.com/****/go-demo:<镜像版本号>
+docker push registry.<regionId>.aliyuncs.com/****/python-demo:<镜像版本号>
 ```
 示例如下：
 ```
-docker push registry.cn-hangzhou.aliyuncs.com/****/go-demo:v1
+docker push registry.cn-hangzhou.aliyuncs.com/****/python-demo:v1
 ```
 成功推送后，您可以登录[容器镜像服务控制台](https://cr.console.aliyun.com/?spm=a2c4g.11186623.0.0.72876c30jQrakJ)，在目标镜像仓库的镜像版本页面查看推送的版本。
 
@@ -118,7 +107,7 @@ docker push registry.cn-hangzhou.aliyuncs.com/****/go-demo:v1
 
 ```yaml
 code:
-  image: registry.cn-hangzhou.aliyuncs.com/namespace4sae/go-demo:v1
+  image: registry.cn-hangzhou.aliyuncs.com/namespace4sae/python-demo:v1
 ```
 将s.yaml文件中的code.image的地址替换为您自己的镜像地址，执行`s deploy`命令自动将镜像部署到SAE，执行结果示例如下：
 ```
