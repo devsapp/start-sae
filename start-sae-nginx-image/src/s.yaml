@@ -10,5 +10,5 @@ services:
       application:
         name: "{{appName}}"
         code:
-          image: registry.cn-hangzhou.aliyuncs.com/namespace4sae/js-demo:v1
+          image: registry.cn-hangzhou.aliyuncs.com/s-sae/sae-nginx:latest
         port: 80
