@@ -4,7 +4,7 @@ FROM openjdk:8u181-jdk-alpine
 ENV MYPATH /app
 WORKDIR $MYPATH
 #添加jar包
-ADD ./target/demo-snapshot.jar demo.jar
+ADD ./target/demo-0.0.1-SNAPSHOT.jar demo.jar
 #添加容器卷
 VOLUME $MYPATH
 EXPOSE 8088

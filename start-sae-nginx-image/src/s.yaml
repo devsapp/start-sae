@@ -6,9 +6,9 @@ services:
   function-test: #  服务名称
     component: sae@dev  # 组件名称
     props: #  组件的属性值
-      region: "{{region}}"
+      region: "{{ region }}"
       application:
-        name: "{{appName}}"
+        name: "{{ appName }}"
         code:
           image: registry.cn-hangzhou.aliyuncs.com/s-sae/sae-nginx:latest
         port: 80
