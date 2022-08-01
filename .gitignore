@@ -1,3 +1,4 @@
 .s
 .mvn
+node_modules
 target
