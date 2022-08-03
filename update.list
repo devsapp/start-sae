@@ -1,1 +1,3 @@
-start-sae-nginx-image
+start-sae-java-jar
+start-sae-java-image
+start-sae-php
