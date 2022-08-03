@@ -7,6 +7,9 @@ services:
     component: sae@dev  # 组件名称
     actions: # 自定义执行逻辑
       pre-deploy: # 在deploy之前运行
+        # 安装依赖
+        - run: composer install --ignore-platform-reqs
+          path: ./code/php
         # 将code文件夹压缩为hello-sae-php.zip，windows环境不支持zip命令，请注释 actions自定义执行逻辑，手动压缩
         - run: zip -q -r ../hello-sae-php-laravel.zip *
           path: ./code # 执行系统命令/钩子的路径
