@@ -4,7 +4,7 @@ access: "{{ access }}"  #  秘钥别名
 
 services:
   function-test: #  服务名称
-    component: sae@dev  # 组件名称
+    component: devsapp/sae@dev  # 组件名称
     actions: # 自定义执行逻辑
       pre-deploy: # 在deploy之前运行
         # 安装依赖
