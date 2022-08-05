@@ -6,8 +6,4 @@ start-sae-nginx-image
 start-sae-nodejs-image
 start-sae-php
 start-sae-php-image
-start-sae-php-laravel
-start-sae-php-laravel-swoole
-start-sae-php-thinkphp
-start-sae-php-wordpress
 start-sae-python-image

@@ -4,7 +4,7 @@ access: "{{ access }}"  #  秘钥别名
 
 services:
   function-test: #  服务名称
-    component: devsapp/devsapp/sae@dev  # 组件名称
+    component: devsapp/sae@dev  # 组件名称
     props: #  组件的属性值
       region: "{{region}}"
       application:
