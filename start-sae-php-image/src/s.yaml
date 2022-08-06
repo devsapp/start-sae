@@ -10,6 +10,5 @@ services:
       application:
         name: "{{appName}}"
         code:
-          type: php
-          image: registry-vpc.cn-hangzhou.aliyuncs.com/namespace4sae/php-server:v1
+          image: registry.cn-hangzhou.aliyuncs.com/namespace4sae/php-demo:v1
         port: 80
