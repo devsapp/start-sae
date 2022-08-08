@@ -1,9 +1,7 @@
-start-sae-go-image
-start-sae-java-image
 start-sae-java-jar
 start-sae-java-war
-start-sae-nginx-image
-start-sae-nodejs-image
 start-sae-php
-start-sae-php-image
-start-sae-python-image
+start-sae-php-laravel
+start-sae-php-laravel-swoole
+start-sae-php-thinkphp
+start-sae-php-wordpress
