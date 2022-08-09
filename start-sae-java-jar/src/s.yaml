@@ -10,9 +10,11 @@ services:
         - run: mvn package -DskipTests # 要执行的系统命令，类似于一种钩子的形式
           path: ./code # 执行系统命令/钩子的路径
     props: #  组件的属性值
-      region: "{{ region }}"
       application:
-        name: "{{ appName }}"
+        region: "{{ region }}"
+        appName: "{{ appName }}"
         code:
+          packageType: FatJar
+          packageVersion: 1.0.0
           package: ./code/target/demo-0.0.1-SNAPSHOT.jar
         port: 8088

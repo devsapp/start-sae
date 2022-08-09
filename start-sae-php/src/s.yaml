@@ -11,11 +11,11 @@ services:
         - run: zip -q -r ../hello-sae-php.zip *
           path: ./code # 执行系统命令/钩子的路径
     props: #  组件的属性值
-      region: "{{region}}"
       application:
-        name: "{{appName}}"
+        region: "{{region}}"
+        appName: "{{appName}}"
         code:
-          type: php
+          packageType: PhpZip
           package: hello-sae-php.zip
           # package: https://sae-packages-cn-hangzhou-1976152945975242.oss-cn-hangzhou.aliyuncs.com/Ogjfx1yYEijpiAil.zip
         port: 80

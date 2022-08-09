@@ -6,8 +6,8 @@ services:
   function-test: #  服务名称
     component: devsapp/sae@dev  # 组件名称
     props: #  组件的属性值
-      region: "{{ region }}"
       application:
+        region: "{{ region }}"
         appName: "{{ appName }}"
         code:
           packageType: Image
