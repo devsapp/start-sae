@@ -10,5 +10,6 @@ services:
       application:
         name: "{{ appName }}"
         code:
-          image: registry.cn-hangzhou.aliyuncs.com/namespace4sae/go-demo:v1
+          packageType: Image
+          imageUrl: registry.cn-hangzhou.aliyuncs.com/namespace4sae/go-demo:v1
         port: 8080

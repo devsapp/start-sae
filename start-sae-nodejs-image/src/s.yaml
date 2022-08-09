@@ -8,7 +8,8 @@ services:
     props: #  组件的属性值
       region: "{{ region }}"
       application:
-        name: "{{ appName }}"
+        appName: "{{ appName }}"
         code:
-          image: registry.cn-hangzhou.aliyuncs.com/s-sae/sae-nodejs:latest
+          packageType: Image
+          imageUrl: registry.cn-hangzhou.aliyuncs.com/s-sae/sae-nodejs:latest
         port: 8080
