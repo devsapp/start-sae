@@ -19,5 +19,5 @@ services:
         appName: "{{appName}}"
         code:
           packageType: PhpZip
-          package: hello-sae-php-thinkphp.zip
+          packageUrl: hello-sae-php-thinkphp.zip
         port: 80

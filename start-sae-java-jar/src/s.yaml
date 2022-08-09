@@ -16,5 +16,5 @@ services:
         code:
           packageType: FatJar
           packageVersion: 1.0.0
-          package: ./code/target/demo-0.0.1-SNAPSHOT.jar
+          packageUrl: ./code/target/demo-0.0.1-SNAPSHOT.jar
         port: 8088

@@ -19,5 +19,5 @@ services:
         appName: "{{appName}}"
         code:
           packageType: PhpZip
-          package: hello-sae-php-laravel.zip
+          packageUrl: hello-sae-php-laravel.zip
         port: 80

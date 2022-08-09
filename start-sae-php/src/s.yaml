@@ -16,6 +16,6 @@ services:
         appName: "{{appName}}"
         code:
           packageType: PhpZip
-          package: hello-sae-php.zip
-          # package: https://sae-packages-cn-hangzhou-1976152945975242.oss-cn-hangzhou.aliyuncs.com/Ogjfx1yYEijpiAil.zip
+          packageUrl: hello-sae-php.zip
+          # packageUrl: https://sae-packages-cn-hangzhou-1976152945975242.oss-cn-hangzhou.aliyuncs.com/Ogjfx1yYEijpiAil.zip
         port: 80

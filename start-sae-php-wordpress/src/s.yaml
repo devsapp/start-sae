@@ -16,5 +16,5 @@ services:
         appName: "{{appName}}"
         code:
           packageType: PhpZip
-          package: hello-sae-php-wordpress.zip
+          packageUrl: hello-sae-php-wordpress.zip
         port: 80

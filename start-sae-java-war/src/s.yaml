@@ -16,6 +16,6 @@ services:
         code:
           packageType: War
           packageVersion: 1.0.0
-          package: ./code/target/demo-0.0.1-SNAPSHOT.war
-          # package: https://sae-packages-cn-hangzhou-1976152945975242.oss-cn-hangzhou.aliyuncs.com/bRW4uZqgzNm6Uq9T.war
+          packageUrl: ./code/target/demo-0.0.1-SNAPSHOT.war
+          # packageUrl: https://sae-packages-cn-hangzhou-1976152945975242.oss-cn-hangzhou.aliyuncs.com/bRW4uZqgzNm6Uq9T.war
         port: 8080
