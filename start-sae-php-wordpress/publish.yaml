@@ -2,7 +2,7 @@ Type: Application
 Name: start-sae-php-wordpress
 Provider:
   - 阿里云
-Version: 0.0.4
+Version: 0.0.5
 Description: Serverless应用引擎SAE
 HomePage: https://github.com/devsapp/start-sae/tree/master/start-sae-php-wordpress
 Tags:
