@@ -17,4 +17,9 @@ services:
           packageType: FatJar
           packageVersion: 1.0.0
           packageUrl: ./code/target/demo-0.0.1-SNAPSHOT.jar
+          ossConfig: auto
         port: 8088
+        cpu: 500
+        memory: 1024
+        replicas: 1
+      slb: auto

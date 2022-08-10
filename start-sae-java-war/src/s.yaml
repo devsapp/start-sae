@@ -14,8 +14,13 @@ services:
         region: "{{ region }}"
         appName: "{{ appName }}"
         code:
+          ossConfig: auto
           packageType: War
           packageVersion: 1.0.0
           packageUrl: ./code/target/demo-0.0.1-SNAPSHOT.war
           # packageUrl: https://sae-packages-cn-hangzhou-1976152945975242.oss-cn-hangzhou.aliyuncs.com/bRW4uZqgzNm6Uq9T.war
         port: 8080
+        cpu: 500
+        memory: 1024
+        replicas: 1
+      slb: auto

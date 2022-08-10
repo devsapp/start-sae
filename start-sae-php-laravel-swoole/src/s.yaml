@@ -20,4 +20,9 @@ services:
         code:
           packageType: PhpZip
           packageUrl: hello-sae-php-laravel-swoole.zip
+          ossConfig: auto
         port: 80
+        cpu: 500
+        memory: 1024
+        replicas: 1
+      slb: auto

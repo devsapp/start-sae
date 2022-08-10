@@ -13,3 +13,7 @@ services:
           packageType: Image
           imageUrl: registry.cn-hangzhou.aliyuncs.com/s-sae/sae-nginx:latest
         port: 80
+        cpu: 500
+        memory: 1024
+        replicas: 1
+      slb: auto
