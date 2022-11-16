@@ -15,8 +15,7 @@ services:
         appName: "{{ appName }}"
         code:
           packageType: FatJar
-          packageVersion: 1.0.0
-          packageUrl: ./code/target/demo-0.0.1-SNAPSHOT.jar
+          packageUrl: ./code/target/demo.jar
           ossConfig: auto
         port: 8088
         cpu: 500
