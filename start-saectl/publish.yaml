@@ -7,7 +7,7 @@ Description: Serverless应用引擎SAE
 HomePage: https://github.com/devsapp/start-sae/tree/master/start-saectl
 Tags:
   - SAE
-Category: ""
+Category: Web框架
 Service: # 使用的服务
   Serverless 应用引擎:
     Authorities: #权限描述
