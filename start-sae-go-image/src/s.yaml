@@ -8,7 +8,7 @@ services:
     props: #  组件的属性值
       application:
         region: "{{ region }}"
-        name: "{{ appName }}"
+        appName: "{{ appName }}"
         code:
           packageType: Image
           imageUrl: registry.cn-hangzhou.aliyuncs.com/namespace4sae/go-demo:v1
